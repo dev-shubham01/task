@@ -1,0 +1,215 @@
+.App {
+  font-family: sans-serif;
+  /* text-align: center; */
+  background-color: #f2f2f2;
+}
+
+.page-title,
+.page-sub-title {
+  letter-spacing: 1px;
+  width: 95%;
+  margin: auto;
+}
+.page-title {
+  color: #3366df;
+  text-transform: uppercase;
+  font-weight: 600;
+  padding-top: 10px;
+}
+.page-sub-title {
+  color: #1743aa;
+  text-transform: uppercase;
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 25px;
+  border-bottom: 1px solid rgb(196, 195, 195);
+  padding: 10px;
+}
+.todo,
+.add-todo {
+  width: calc(100% - 40px);
+  border: 1px solid #eee;
+  padding: 20px 20px;
+  margin: 10px 20px 20px;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+  background-color: #f1f7ff3d;
+}
+.todo {
+  min-height: 100px;
+  position: relative;
+}
+
+.add-todo {
+  padding-bottom: 25px !important;
+}
+
+.title {
+  margin: 0 0 20px;
+  border-left: 5px solid #1743aa;
+  padding-left: 20px;
+  /* margin-left: 20px */
+  font-size: 20px;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  text-transform: capitalize;
+  color: #104ad1;
+}
+
+/* Loading Mode */
+
+.loading {
+  position: absolute;
+  left: 50%;
+  top: 60px;
+  margin: 0;
+  padding: 0;
+  /* margin-right: 10px; */
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  max-height: 18px;
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+  -webkit-animation: spin 0.8s linear infinite;
+  border: 2px solid gray;
+  border-left: 2px solid transparent;
+
+  /* transform: translate(-10px);
+    -webkit-transform: translate(-10px);
+    -moz-transform: translate(-10px);
+    -ms-transform: translate(-10px);
+    -o-transform: translate(-10px); */
+}
+
+@keyframes spin {
+  to {
+    -webkit-transform: rotate(360deg);
+  }
+}
+@-webkit-keyframes spin {
+  to {
+    -webkit-transform: rotate(360deg);
+  }
+}
+
+.add-todo-div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.add-todo-elements-input {
+  display: flex;
+  flex-direction: column;
+}
+
+.add-todo-elements-check {
+  display: flex;
+  flex-direction: column;
+
+  justify-content: center;
+  align-items: start;
+}
+
+.add-work {
+  font-size: 14px;
+  font-weight: 600;
+  margin: 0;
+  /* margin-left: 2px; */
+}
+
+.add-work-input {
+  padding: 6px 10px;
+  font-size: 15px;
+  border-radius: 3px;
+  border: 1px solid gray;
+  outline: none;
+}
+.add-work-input::placeholder {
+  letter-spacing: 1px;
+  color: gray;
+}
+
+.add-work-input:focus {
+  border: 1px solid #007bff;
+  box-shadow: 0 0.313rem 0.719rem rgb(0 123 255 / 10%),
+    0 0.156rem 0.125rem rgb(0 0 0 / 6%);
+}
+
+.check-label {
+  margin-right: 10px;
+  font-size: 14px;
+  margin: 0;
+  cursor: pointer;
+
+  /* font-weight: 600; */
+}
+
+.form-check {
+  padding-left: 50px !important;
+  cursor: pointer;
+}
+
+/*  */
+/* 
+ */
+
+.todo-list,
+.todo-list-done {
+  border: 1px solid rgb(209, 209, 209);
+  padding: 10px 20px;
+  margin: 10px 0;
+  border-radius: 3px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.todo-list-done {
+  background-color: rgba(2, 185, 57, 0.1);
+  border: 1px solid rgba(2, 185, 57, 0.4);
+}
+.todo-list:hover {
+  cursor: pointer;
+  border: 1px solid #007bff;
+  box-shadow: 0 0.313rem 0.719rem rgb(0 123 255 / 10%),
+    0 0.156rem 0.125rem rgb(0 0 0 / 6%);
+}
+
+.todo-list-done:hover {
+  border: 1px solid rgba(2, 185, 57);
+  box-shadow: 0 0.313rem 0.719rem rgb(0 255 123 / 10%),
+    0 0.156rem 0.125rem rgb(0 0 0 / 6%);
+}
+
+.status-done,
+.status-todo {
+  position: absolute;
+  top: -10px;
+  background-color: rgb(136, 233, 165);
+  padding: 2px 10px;
+  color: #28a745;
+  left: 10px;
+  font-size: 12px;
+  border-radius: 100px;
+  border: 1px solid #28a745;
+  font-weight: 800;
+}
+
+.status-todo {
+  color: rgb(255, 145, 0);
+  background-color: rgb(255, 233, 204);
+  border-color: rgb(255, 145, 0);
+}
+.status-todo-toggle .form-check {
+  height: 20px;
+  min-width: 40px;
+  padding-left: 45px !important;
+  padding-bottom: 0;
+}
+.form-check-input:checked {
+  background-color: #28a745 !important;
+  border-color: #28a745 important;
+}
